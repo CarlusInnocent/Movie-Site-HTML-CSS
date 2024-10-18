@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(1, 1, 1);
+    color: white;
+}
+
+/* Navigation Bar */
+.logo h1 {
+    color: rgb(255, 144, 47);
+    font-weight: bold;
+    font-size: 50px; /* Increased size */
+    letter-spacing: 2px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(36, 33, 33);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 250px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.search-bar input::placeholder {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #555;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.header {
+    height: 1000px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('./Movies-TopArt.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Genres Section */
+.genres {
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.explore {
+    font-size: 30px;
+    padding-top: 10px;
+    color: aqua;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 50px;
+    padding-left: 5px;
+}
+
+.genres-pics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genres-pics img {
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.genres-pics img:hover {
+    transform: scale(1.1);
+}
+
+.genres-pics p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Top Movies Section */
+.top h1 {
+    font-size: 100px;
+    text-align: left;
+    margin-left: 100px;
+    color: rgb(118, 103, 252);
+    margin-top: 60px;
+}
+
+.top-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 3px solid goldenrod;
+    margin: 100px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.movie img {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie img:hover {
+    transform: scale(1.1);
+}
+
+.movie p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Subscribe Section */
+.subscribe {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.subscribe h1 {
+    font-size: 50px;
+    color: red;
+}
+
+.subscribe p {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.subscribe button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+#email {
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#email::placeholder {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+/* Footer */
+.footer section {
+    background-color: #010101;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #ffcc00;
+}
+
+.to-blur {
+    filter: blur(10px);
+}
+
+/* RESPONSIVENESS */
+
+/* For large devices (desktops, large tablets) */
+@media (max-width: 1200px) {
+    .search-bar input {
+        width: 200px; /* Smaller search bar */
+    }
+    
+    .top h1 {
+        font-size: 80px; /* Smaller header text */
+    }
+
+    .genres-pics img, .movie img {
+        width: 200px; /* Smaller images */
+        height: 250px;
+    }
+}
+
+/* For medium devices (tablets, small laptops) */
+@media (max-width: 992px) {
+    .logo h1 {
+        font-size: 40px; /* Smaller logo */
+    }
+    
+    .search-bar input {
+        width: 180px;
+    }
+    
+    .top h1 {
+        font-size: 60px;
+    }
+
+    .genres {
+        margin-left: 50px; /* Adjusted margin for smaller screens */
+    }
+    
+    .genres-pics img, .movie img {
+        width: 180px;
+        height: 230px;
+    }
+}
+
+/* For small devices (phones, small tablets) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .search-bar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-bar input {
+        width: 150px;
+    }
+
+    .genres {
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+    
+    .top h1 {
+        font-size: 50px;
+    }
+
+    .genres-pics img, .movie img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .subscribe h1 {
+        font-size: 40px;
+    }
+
+    #email {
+        width: 70%; /* Wider input field for phones */
+    }
+
+    .header {
+        margin-top: 200px;
+    }
+}
+
+/* For extra small devices (small phones) */
+@media (max-width: 576px) {
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    .search-bar input {
+        width: 120px;
+    }
+
+    .top h1 {
+        font-size: 40px;
+    }
+
+    .genres-pics img, .movie img {
+        width: 120px;
+        height: 170px;
+    }
+
+    .header {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .content h1 {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 20px;
+    }
+}
