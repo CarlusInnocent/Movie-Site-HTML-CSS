@@ -109,6 +109,7 @@ body {
     color: white;
 }
 
+
 /* Genres Section */
 .genres {
     margin-top: 150px;
@@ -136,6 +137,11 @@ body {
     margin: 10px;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
+}
+
+#genres img {
+    width: 200px;
+    height: 200px;
 }
 
 .genres-pics img:hover {
